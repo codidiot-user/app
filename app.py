@@ -5901,7 +5901,7 @@ There are several types of kernels, depending on how they interact with hardware
 The kernel is the heart of any operating system, providing essential services that enable the system to run efficiently. It interacts directly with hardware and ensures that user programs and system resources are managed securely and effectively. 
 The design and structure of the kernel vary depending on the operating system, but its core function remains the same: managing system resources, enabling multitasking, and ensuring system stability and security."""})
 
-    else:
+else:
      with st.chat_message("bot"):
       data=ai(input)
       st.write(data)

@@ -7,7 +7,7 @@ def ai(txt):
         if 'generateContent' in m.supported_generation_methods:
             print(m.name)
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content("describe everythin in detail except given below"+txt)
+    response = model.generate_content("response in simple manner"+txt)
     return response.text
 
 

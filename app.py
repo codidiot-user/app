@@ -7,7 +7,7 @@ def ai(txt):
         if 'generateContent' in m.supported_generation_methods:
             print(m.name)
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content(" "+txt)
+    response = model.generate_content("describe everythin in detail except given below"+txt)
     return response.text
 
 
@@ -38,7 +38,7 @@ if input:
         with st.chat_message("bot"):
             st.write("How can I help with you 🙂!")
             st.session_state.message.append({"role":"bot","message":"How can I help with you 🙂!"})
-    if "Who are you" in input:
+    if "Who are you" in input or "who are you" in input:
         with st.chat_message("bot"):
             st.write("I'm a updated version of CI-gpt. I have fed with lot of information and details!")
             st.session_state.message.append({"role":"bot","message":"I'm a updated version of CI-gpt. I have fed with lot of information and details!"})
